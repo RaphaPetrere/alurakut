@@ -24,12 +24,15 @@ const GlobalStyle = createGlobalStyle`
     height: auto;
     display: block;
   }
-  
+
   ${AlurakutStyles}
 `
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function App({ Component, pageProps }) {
+  return (
+    <>
+      <GlobalStyle />
+      <Component {...pageProps} />
+    </>
+  )
 }
-
-export default MyApp
